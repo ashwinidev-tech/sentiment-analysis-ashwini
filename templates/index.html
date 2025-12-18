@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentiment Analyzer</title>
     <style>
-        /* Full-page purple gradient background */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -16,8 +15,6 @@
             align-items: center;
             color: #fff;
         }
-
-        /* Container for content */
         .container {
             background: rgba(0, 0, 0, 0.2);
             padding: 40px;
@@ -27,13 +24,11 @@
             max-width: 600px;
             text-align: center;
         }
-
         h2 {
             margin-bottom: 30px;
             font-size: 2.2em;
             letter-spacing: 1px;
         }
-
         textarea {
             width: 100%;
             padding: 15px;
@@ -43,7 +38,6 @@
             resize: none;
             margin-bottom: 20px;
         }
-
         button {
             background: #fff;
             color: #7b2ff7;
@@ -54,13 +48,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
         button:hover {
             background: #7b2ff7;
             color: #fff;
             transform: scale(1.05);
         }
-
         #result {
             margin-top: 25px;
             font-size: 1.3em;
@@ -69,7 +61,6 @@
     </style>
 </head>
 <body>
-
 <div class="container">
     <h2>💜 Sentiment Analyzer 💜</h2>
     <textarea id="text" rows="4" placeholder="Type your text here..."></textarea>
@@ -77,16 +68,13 @@
     <button onclick="analyze()">Analyze</button>
     <p id="result"></p>
 </div>
-
 <script>
 function analyze() {
     const text = document.getElementById('text').value;
-
     if(text.trim() === "") {
         document.getElementById('result').innerText = "Please enter some text!";
         return;
     }
-
     fetch('/analyze', {
         method: 'POST',
         headers: {
@@ -102,6 +90,5 @@ function analyze() {
     .catch(err => console.error(err));
 }
 </script>
-
 </body>
 </html>
