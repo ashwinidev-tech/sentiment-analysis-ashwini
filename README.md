@@ -20,7 +20,7 @@ This project uses MongoDB for storing sentiment analysis results.
 - MongoDB 
 
 ## Project Structure
-app.py -> Flask backend
+app.py -> Flask 
 ss.py -> Sentiment analysis logic(python file)
 templates/index.html -> HTML files
 requirements.txt-> Required libraries
